@@ -33,7 +33,7 @@ const UsersAdmin = () => {
                     }
                     
                     return (<tr>
-                        <td>{p.name}</td><td className="text-right">{p.password}</td><td>{p.name}</td><td className="text-right">{p.nickname}</td><td className="text-right">{p.level}</td>
+                        <td>{p.name}</td><td className="text-right">{p.nickname}</td><td className="text-right">{p.level}</td>
                         <td className="d-flex justify-content-between">
                             {button}
                             <button className="btn btn-warning" onClick={() => edit(p)}><i className="fas fa-pencil"></i> Editar</button>
@@ -88,7 +88,7 @@ const UsersAdmin = () => {
     }
     const edit = (users) => {
         let usersData = JSON.stringify(users);
-        sessionStorage.setItem("users", usersData);
+        sessionStorage.setItem("user", usersData);
         navigate("/users/edit");
     }
     
@@ -124,7 +124,6 @@ const UsersAdmin = () => {
                                             <tr>
                                                 <th>Nombre</th>
                                                 <th>Nickname</th>
-                                                <th>Contraseña</th>
                                                 <th>Nivel</th>
                                                 <th>Acciones</th>
                                             </tr>
